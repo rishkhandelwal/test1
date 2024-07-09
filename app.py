@@ -36,7 +36,7 @@ def chat_with_openai(chat_history, docx_file):
     # Return the sentences as a list
     return jsonify({'response': sentences})
 
-@app.route('/api/manager-chat=4', methods=['POST'])
+@app.route('/api/manager-chat', methods=['POST'])
 def chat():
     docx_file = request.json['docx_file']
     return chat_with_openai(None, docx_file)
